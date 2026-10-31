@@ -68,6 +68,13 @@ README.txt                        Diese Anleitung
 VORAUSSETZUNGEN UND START
 ------------------------
 Linux, Python >= 3.10 und `secret-tool` aus dem Paket libsecret-tools.
+Das Programm benoetigt einen verfuegbaren, entsperrten Secret-Service-
+Schluesselbund. Unter einer reinen Headless-/SSH-Sitzung kann dieser fehlen.
+
+Repository klonen und in das Projektverzeichnis wechseln:
+
+    git clone https://github.com/Conrad3rd/plesk-webhosting-manager.git
+    cd plesk-webhosting-manager
 
     python3 --version
     command -v secret-tool || sudo apt install libsecret-tools
@@ -113,14 +120,15 @@ Wenn genau ein Konto eingerichtet ist, darf --account entfallen.
 
 DOMAINLISTE FUER DEN PROJEKTMANAGER
 ---------------------------------
+Die nachfolgenden Befehle im zuvor geklonten Projektverzeichnis ausfuehren.
 Auswaehlbare Hauptdomains eines Kontoprofils anzeigen (ohne --domain):
 
-    python3 ~/Projects/plesk-webhosting-manager/plesk-webhosting.py \
+    python3 plesk-webhosting.py \
       --account hosting-1 domains list
 
 JSON-Ausgabe fuer Desktop-Tools/project_manager:
 
-    python3 ~/Projects/plesk-webhosting-manager/plesk-webhosting.py \
+    python3 plesk-webhosting.py \
       --account hosting-1 domains list --json
 
 Beispiel (Domainnamen und IDs sind nur Beispielwerte):
