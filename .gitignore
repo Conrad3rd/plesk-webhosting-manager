@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Logs
+logs/
+*.log
+*.jsonl
+
+# Zugangsdaten
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode/
+.idea/
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+# Keine lokalen Diagnosen, Exportdateien und Archive veroeffentlichen
+*.zip
+*.har
+*.trace
+*.sqlite
+*.sqlite3
+*.db
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.p8
+*.bak
+*.backup
+*credentials*.json
+*secrets*.json
+*storage_state*.json
+playwright-report/
+test-results/
+
+# Lokale Kontoprofile und exportierte Sitzungen
+accounts.json
+*.cookies
+*.session
+*.session.json
